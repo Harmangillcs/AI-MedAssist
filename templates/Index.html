@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="{{ url_for('static', filename='Doctor_img.webp') }}" alt="Doctor Icon" class="header-icon">
+            <h1>Medical Chatbot</h1>
+        </div>
+        <div class="chat-body">
+            </div>
+        <div class="chat-input">
+            <textarea id="userInput" placeholder="Type your query here..."></textarea>
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

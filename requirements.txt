@@ -1,0 +1,15 @@
+ctransformers==0.2.27         
+sentence-transformers
+transformers 
+huggingface-hub 
+torch
+faiss-cpu                     
+langchain==0.0.225
+langchain-community            
+langchain-core                 
+pypdf                          
+flask                          
+jupyter                        
+ipywidgets                                              
+tqdm
+-e .

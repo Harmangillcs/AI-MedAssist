@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #281F4B; /* Dark purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px; /* Changed from 400px to 600px */
+    height: 600px; /* Keep or adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    background-color: #1A133A;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.chat-header {
+    background-color: #3B2F70; /* Darker purple for header */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #4F438B;
+    text-align: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #fff;
+    flex-grow: 1;
+}
+
+.header-icon {
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.chat-body {
+    flex-grow: 1; /* Allows chat body to expand and take available space */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling for messages that will be added */
+    display: flex; /* Use flexbox to manage messages */
+    flex-direction: column; /* Stack messages vertically */
+}
+
+/* Scrollbar styling for chat-body */
+.chat-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background: #1A133A;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background: #3B2F70;
+    border-radius: 10px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px 20px;
+    border-top: 1px solid #4F438B;
+    background-color: #3B2F70; /* Same as header background */
+    align-items: center;
+}
+
+.chat-input textarea {
+    flex-grow: 1;
+    border: none;
+    background-color: #4F438B; /* Slightly lighter input background */
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 20px;
+    resize: none; /* Prevent manual resizing */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+    min-height: 40px; /* Ensure a minimum height for the textarea */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    margin-right: 10px;
+    overflow-y: auto; /* Allow textarea to scroll if content is long */
+}
+
+.chat-input textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #6A3FFB; /* Highlight on focus */
+}
+
+.chat-input textarea::placeholder {
+    color: #ccc;
+}
+
+.chat-input button {
+    background-color: #6A3FFB; /* Send button color */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chat-input button:hover {
+    background-color: #5A2FE0; /* Darker on hover */
+}
+
+.message {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 90%;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.user-message {
+    background-color: #6A3FFB;
+    align-self: flex-end;
+    color: white;
+    border-top-right-radius: 0;
+}
+
+.bot-message {
+    background-color: #4F438B;
+    align-self: flex-start;
+    color: white;
+    border-top-left-radius: 0;
+}
+
+.typing-message {
+    font-style: italic;
+    color: #aaa;
+    align-self: flex-start;
+}
